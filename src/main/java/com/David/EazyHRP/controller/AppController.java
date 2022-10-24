@@ -23,6 +23,10 @@ public class AppController {
     @Autowired
     private AppServiceImpl service;
 
+    public AppController(AppServiceImpl service){
+        this.service = service;
+    }
+
     //<editor-fold desc = "Batch"
 
     @Operation(description = "To insert a batch record", tags = "Batch")

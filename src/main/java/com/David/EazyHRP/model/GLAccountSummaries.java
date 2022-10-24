@@ -1,11 +1,14 @@
 package com.David.EazyHRP.model;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@AllArgsConstructor
 @Table(name = "GLAccountSummaries")
 public class GLAccountSummaries {
 

@@ -1,5 +1,7 @@
 package com.David.EazyHRP.service;
 
+import com.David.EazyHRP.model.GLAccountSummaries;
+import com.David.EazyHRP.model.SalarySchedulesWithMultipleAccounts;
 import com.David.EazyHRP.repo.BatchRepo;
 import com.David.EazyHRP.repo.GLAccountSummariesRepo;
 import com.David.EazyHRP.repo.SalarySchedulesWithMultipleAccountsRepo;
@@ -21,7 +23,11 @@ public class AppServiceImpl{
     @Autowired
     private SalarySchedulesWithMultipleAccountsRepo salarySchedulesWithMultipleAccountsRepo;
 
-
+    public AppServiceImpl(BatchRepo batchRepo, GLAccountSummariesRepo glAccountSummariesRepo, SalarySchedulesWithMultipleAccountsRepo salarySchedulesWithMultipleAccountsRepo ){
+        this.batchRepo = batchRepo;
+        this.glAccountSummariesRepo = glAccountSummariesRepo;
+        this.salarySchedulesWithMultipleAccountsRepo = salarySchedulesWithMultipleAccountsRepo;
+    }
 
     public BatchRepo getBatchRepo() {
         return batchRepo;
